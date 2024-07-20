@@ -1,0 +1,123 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SecurePay API",
+    "description": "API documentation for SecurePay"
+  },
+  "host": "localhost:5000",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register a new user",
+        "tags": ["Auth"],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User registered successfully"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login a user",
+        "tags": ["Auth"],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User logged in successfully"
+          }
+        }
+      }
+    },
+    "/transactions": {
+      "post": {
+        "summary": "Create a new transaction",
+        "tags": ["Transactions"],
+        "parameters": [
+          {
+            "name": "transaction",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Transaction"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transaction created successfully"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all transactions",
+        "tags": ["Transactions"],
+        "responses": {
+          "200": {
+            "description": "List of transactions"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Login": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Transaction": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

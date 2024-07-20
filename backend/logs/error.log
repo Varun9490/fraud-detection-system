@@ -1,0 +1,5 @@
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:06:49"}
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:15:05"}
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:18:53"}
+{"level":"error","message":"MongoDB connection error: options usecreateindex, usefindandmodify are not supported","timestamp":"2024-07-20 12:35:44"}
+{"level":"error","message":"MongoDB connection error: options usecreateindex, usefindandmodify are not supported","timestamp":"2024-07-20 12:36:21"}

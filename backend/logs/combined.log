@@ -1,0 +1,36 @@
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-07-20 12:06:49"}
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:06:49"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-07-20 12:15:05"}
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:15:05"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-07-20 12:18:53"}
+{"level":"error","message":"MongoDB connection error: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","timestamp":"2024-07-20 12:18:53"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-07-20 12:35:44"}
+{"level":"error","message":"MongoDB connection error: options usecreateindex, usefindandmodify are not supported","timestamp":"2024-07-20 12:35:44"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-07-20 12:36:21"}
+{"level":"error","message":"MongoDB connection error: options usecreateindex, usefindandmodify are not supported","timestamp":"2024-07-20 12:36:21"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:39:05"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:39:08"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:40:18"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:40:20"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:40:32"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:40:33"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:42:13"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:42:16"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:42:53"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:42:54"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:43:12"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:43:35"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:43:39"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:43:44"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:44:39"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:44:42"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:45:07"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:45:08"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:45:19"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:47:37"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:47:40"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:47:57"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:47:59"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:48:07"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-20 12:49:19"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-20 12:49:24"}
