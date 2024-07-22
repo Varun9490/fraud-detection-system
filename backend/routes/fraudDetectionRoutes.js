@@ -1,11 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const FraudDetectionService = require("../services/fraudDetectionService");
+const fraudDetectionService = require("../services/fraudDetectionService");
 
-// Example route for fraud detection
 router.post("/check", async (req, res) => {
   try {
-    const result = await FraudDetectionService.checkFraud(req.body);
+    const result = await fraudDetectionService.processTransaction(req.body);
     res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });
