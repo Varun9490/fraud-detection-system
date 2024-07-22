@@ -5,10 +5,9 @@ const keys = require("../config/keys");
 const zxcvbn = require("zxcvbn");
 const validator = require("validator");
 const { pwnedPassword } = require("hibp");
-const rateLimit = require("express-rate-limit"); // Middleware for rate limiting
-const winston = require("winston"); // Logger for failed attempts
+const winston = require("winston");
 
-// Define valid email providers
+// List of valid email providers
 const validEmailProviders = [
   "gmail.com",
   "yahoo.com",
@@ -17,15 +16,6 @@ const validEmailProviders = [
   // Add more valid email providers as needed
 ];
 
-// Rate limiter middleware
-const loginRateLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 requests per windowMs
-  message: "Too many login attempts from this IP, please try again later.",
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
 // Logger setup
 const logger = winston.createLogger({
   level: "info",
@@ -33,17 +23,15 @@ const logger = winston.createLogger({
   transports: [new winston.transports.File({ filename: "loginAttempts.log" })],
 });
 
-// Middleware function to validate email format
 const validateEmail = (email) => {
   return validator.isEmail(email);
 };
 
-// Register function
-exports.register = async (req, res) => {
+const register = async (req, res) => {
   const { name, email, password } = req.body;
 
   // Check email validity
-  if (!validateEmail(email)) {
+  if (!validator.isEmail(email)) {
     return res.status(400).json({ msg: "Invalid email format" });
   }
 
@@ -95,21 +83,17 @@ exports.register = async (req, res) => {
       keys.jwtSecret,
       { expiresIn: keys.jwtExpiration },
       (err, token) => {
-        if (err) {
-          console.error("Token generation error:", err);
-          return res.status(500).send("Server error");
-        }
+        if (err) throw err;
         res.json({ token });
       }
     );
   } catch (err) {
-    console.error("Register error:", err.message);
+    console.error(err.message);
     res.status(500).send("Server error");
   }
 };
 
-// Login function
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
 
   // Validate email format
@@ -156,7 +140,8 @@ exports.login = async (req, res) => {
   }
 };
 
-// Export the rate limiter for use in other files
+// Export the functions
 module.exports = {
-  loginRateLimiter,
+  register,
+  login,
 };

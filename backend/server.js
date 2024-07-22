@@ -11,7 +11,6 @@ const authRoutes = require("./routes/authRoutes.js");
 const fraudDetectionRoutes = require("./routes/fraudDetectionRoutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const userRoutes = require("./routes/userRoutes");
-const { loginRateLimiter } = require("./controllers/authController.js");
 
 // Create the Express app
 const app = express();
@@ -22,9 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Swagger setup
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-// Apply the rate limiter middleware
-app.use("/api/auth", loginRateLimiter, authRoutes);
 
 app.use("/api/fraud", fraudDetectionRoutes);
 app.use("/api/transactions", transactionRoutes);
