@@ -64,3 +64,5 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-22 11:14:51"}
 {"level":"info","message":"MongoDB connected","timestamp":"2024-07-22 11:15:13"}
 {"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-22 11:15:13"}
+{"level":"info","message":"MongoDB connected","timestamp":"2024-07-22 11:18:13"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2024-07-22 11:18:13"}
