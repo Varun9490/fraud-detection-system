@@ -6,6 +6,7 @@ const zxcvbn = require("zxcvbn");
 const validator = require("validator");
 const { pwnedPassword } = require("hibp");
 const winston = require("winston");
+const { validationResult } = require("express-validator");
 
 // List of valid email providers
 const validEmailProviders = [
@@ -28,6 +29,11 @@ const validateEmail = (email) => {
 };
 
 const register = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const { name, email, password } = req.body;
 
   // Check email validity

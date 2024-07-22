@@ -22,6 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Swagger setup
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// Apply the rate limiter middleware
+app.use("/api/auth", authRoutes);
+
 app.use("/api/fraud", fraudDetectionRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/users", userRoutes);
